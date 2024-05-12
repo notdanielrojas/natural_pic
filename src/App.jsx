@@ -8,7 +8,7 @@ import Home from "./views/Home"; // Importa la vista Home
 import Favoritos from "./views/Favorites"; // Importa la vista Favoritos
 import NotFound from "./views/NotFound"; // Importa la vista NotFound
 
-function App() {
+export default function App() {
   // Define el componente principal App
   return (
     <>
@@ -36,5 +36,3 @@ function App() {
     </>
   );
 }
-
-export default App; // Exporta el componente App como predeterminado

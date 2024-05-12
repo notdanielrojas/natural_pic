@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap"; // Importa el componente Container de react-bootstrap
 
-const NotFound = () => {
+export default function NotFound() {
   // Define la vista NotFound
   return (
     <Container // Contenedor principal
@@ -12,6 +12,4 @@ const NotFound = () => {
       {/* Mensaje de error */}
     </Container>
   );
-};
-
-export default NotFound; // Exporta la vista NotFound como predeterminada
+}
