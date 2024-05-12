@@ -1,45 +1,45 @@
 #root {
-  color: #fff;
-  font-family: system-ui;
+  color: #fff; /* Establece el color de texto para el elemento raíz */
+  font-family: system-ui; /* Establece la fuente predeterminada para el elemento raíz */
 }
 
 .navbar {
-  display: block;
-  background: #43a047;
-  padding: 1.2rem;
-  text-align: center;
-  font-size: x-large;
+  display: block; /* Cambia el comportamiento de la barra de navegación a bloque */
+  background: #43a047; /* Establece el color de fondo para la barra de navegación */
+  padding: 1.2rem; /* Agrega relleno a la barra de navegación */
+  text-align: center; /* Centra el texto horizontalmente en la barra de navegación */
+  font-size: x-large; /* Establece el tamaño de fuente grande para la barra de navegación */
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
+  text-decoration: none; /* Elimina la decoración de subrayado para los enlaces */
+  color: #fff; /* Establece el color de texto para los enlaces */
 }
 
 h1 {
-  text-align: center;
-  color: #43a047;
+  text-align: center; /* Centra el texto horizontalmente */
+  color: #43a047; /* Establece el color de texto para los encabezados h1 */
 }
 
 .card {
-  transition: all 0.3s;
+  transition: all 0.3s; /* Agrega una transición suave a todos los cambios de la tarjeta */
 }
 
 .card-img-overlay {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex; /* Utiliza el modelo de caja flexible para la superposición de imagen de la tarjeta */
+  flex-direction: column; /* Establece la dirección de los elementos secundarios en columnas */
+  justify-content: space-between; /* Distribuye uniformemente el espacio entre los elementos secundarios */
 }
 
 .card:hover {
-  transform: scale(1.08);
+  transform: scale(1.08); /* Escala la tarjeta al pasar el cursor sobre ella */
 }
 
 .card:hover .card-img {
-  /* background-color: rgba(67, 160, 71, .5); */
-  filter: brightness(50%);
+  /* background-color: rgba(67, 160, 71, .5); */ /* Comentario: Se ha comentado el fondo de la imagen de la tarjeta */
+  filter: brightness(50%); /* Reduce el brillo de la imagen de la tarjeta al pasar el cursor sobre ella */
 }
 
 .heart {
-  cursor: pointer;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el icono de corazón */
 }

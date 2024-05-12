@@ -1,21 +1,25 @@
-import PropTypes from "prop-types";
-import { useContext } from "react";
-import { Context } from "../contexts/PhotoContext";
+import PropTypes from "prop-types"; // Importa el módulo PropTypes para la validación de tipos
+import { useContext } from "react"; // Importa el hook useContext de React
+import { Context } from "../contexts/PhotoContext"; // Importa el contexto PhotoContext
 
 export default function IconHeart({ id }) {
-  const { fotos, setFotos } = useContext(Context);
-  const fotoFavorita = fotos.find((foto) => foto.id === id);
+  // Define el componente IconHeart con un prop id
+  const { fotos, setFotos } = useContext(Context); // Obtiene el contexto de fotos y la función para establecer fotos
+  const fotoFavorita = fotos.find((foto) => foto.id === id); // Busca la foto correspondiente al ID proporcionado
 
   function handleClick() {
-    fotoFavorita.liked = !fotoFavorita.liked;
-    const newFotos = [...fotos];
-    setFotos(newFotos);
+    // Función para manejar el clic en el icono de corazón
+    fotoFavorita.liked = !fotoFavorita.liked; // Cambia el estado liked de la foto
+    const newFotos = [...fotos]; // Crea una copia del array de fotos
+    setFotos(newFotos); // Actualiza el estado de las fotos con la nueva copia
   }
 
-  const color = fotoFavorita.liked ? "red" : "white";
+  const color = fotoFavorita.liked ? "red" : "white"; // Determina el color del corazón según el estado liked
 
   return (
     <span className='heart' onClick={handleClick}>
+      {" "}
+      {/* Contenedor del icono de corazón */}
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width='24'
@@ -34,5 +38,5 @@ export default function IconHeart({ id }) {
 }
 
 IconHeart.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired, // Propiedad id es un número requerido
 };
