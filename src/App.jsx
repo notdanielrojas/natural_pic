@@ -8,31 +8,21 @@ import Home from "./views/Home"; // Importa la vista Home
 import Favoritos from "./views/Favorites"; // Importa la vista Favoritos
 import NotFound from "./views/NotFound"; // Importa la vista NotFound
 
-export default function App() {
-  // Define el componente principal App
+function App() { // Define el componente principal App
   return (
-    <>
-      {" "}
-      {/* Fragmento de React */}
-      <PhotoProvider>
-        {" "}
-        {/* Proveedor de contexto para las fotos */}
-        <BrowserRouter>
-          {" "}
-          {/* Componente de enrutamiento */}
+    <> {/* Fragmento de React */}
+      <PhotoProvider> {/* Proveedor de contexto para las fotos */}
+        <BrowserRouter> {/* Componente de enrutamiento */}
           <Navbar /> {/* Barra de navegación */}
-          <Routes>
-            {" "}
-            {/* Componente de enrutamiento */}
-            <Route path='/' element={<Home />} />{" "}
-            {/* Ruta para la vista Home */}
-            <Route path='/favoritos' element={<Favoritos />} />{" "}
-            {/* Ruta para la vista Favoritos */}
-            <Route path='*' element={<NotFound />} />{" "}
-            {/* Ruta para la vista NotFound */}
+          <Routes> {/* Componente de enrutamiento */}
+            <Route path='/' element={<Home />} /> {/* Ruta para la vista Home */}
+            <Route path='/favoritos' element={<Favoritos />} />{" "} {/* Ruta para la vista Favoritos */}
+            <Route path='*' element={<NotFound />} /> {/* Ruta para la vista NotFound */}
           </Routes>
         </BrowserRouter>
       </PhotoProvider>
     </>
   );
 }
+
+export default App; // Exporta el componente App como predeterminado
