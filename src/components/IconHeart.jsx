@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { Context } from "../contexts/FotoContext";
+import { Context } from "../contexts/PhotoContext";
 
-export default function Heart({ id }) {
+export default function IconHeart({ id }) {
   const { fotos, setFotos } = useContext(Context);
   const fotoFavorita = fotos.find((foto) => foto.id === id);
 
@@ -33,6 +33,6 @@ export default function Heart({ id }) {
   );
 }
 
-Heart.propTypes = {
+IconHeart.propTypes = {
   id: PropTypes.number.isRequired,
 };

@@ -5,7 +5,7 @@ const API_KEY = "VGVXd8nnBL31B9m0FD4m39m76Vbddv82W37YYq737OB49SnruQT7klFl";
 
 export const Context = createContext();
 
-export function FotoProvider({ children }) {
+export function PhotoProvider({ children }) {
   const [fotos, setFotos] = useState([]);
 
   const getData = async () => {
@@ -36,6 +36,6 @@ export function FotoProvider({ children }) {
   return <Context.Provider value={globalState}> {children} </Context.Provider>;
 }
 
-FotoProvider.propTypes = {
+PhotoProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };

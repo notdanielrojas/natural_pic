@@ -2,16 +2,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { FotoProvider } from "./contexts/FotoContext";
-import Navbar from "./componentes/Navbar";
+import { PhotoProvider } from "./contexts/PhotoContext";
+import Navbar from "./components/Navbar";
 import Home from "./views/Home";
-import Favoritos from "./views/Favoritos";
+import Favoritos from "./views/Favorites";
 import NotFound from "./views/NotFound";
 
 function App() {
   return (
     <>
-      <FotoProvider>
+      <PhotoProvider>
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -20,7 +20,7 @@ function App() {
             <Route path='*' element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-      </FotoProvider>
+      </PhotoProvider>
     </>
   );
 }

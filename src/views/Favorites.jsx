@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import Gallery from "../componentes/Gallery";
+import Gallery from "../components/Gallery";
 
 export default function Favoritos() {
   return (

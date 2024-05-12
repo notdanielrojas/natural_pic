@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { Col, Card } from "react-bootstrap";
 import { useContext } from "react";
-import { Context } from "../contexts/FotoContext";
-import Heart from "../componentes/Heart";
+import { Context } from "../contexts/PhotoContext";
+import IconHeart from "./IconHeart";
 
 export default function Gallery({ filtro = "home" }) {
   const { fotos } = useContext(Context);
@@ -17,7 +17,7 @@ export default function Gallery({ filtro = "home" }) {
               <Card.Img src={foto.src} alt={foto.alt} />
               <Card.ImgOverlay>
                 <Card.Text className='text-end'>
-                  <Heart id={foto.id} />
+                  <IconHeart id={foto.id} />
                 </Card.Text>
                 <Card.Text>{foto.alt}</Card.Text>
               </Card.ImgOverlay>
